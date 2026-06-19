@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synix Store | Official Minecraft FFA Shop</title>
+    <meta name="description" content="Enhance your Minecraft gameplay on Synix FFA Season 2. Buy ranks, powerful maces, and exclusive premium kits. Fast delivery via Discord.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="glow-bg"></div>
+    <div class="stars"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <img src="assets/logo.jpg" alt="Synix FFA Logo" class="logo-img">
+                <span class="logo-text">SYNIX <span class="accent-text">FFA</span></span>
+            </a>
+            <nav class="nav-links" id="nav-menu">
+                <a href="#hero" class="nav-link active" id="link-home">Home</a>
+                <a href="#store" class="nav-link" id="link-store">Maces & Ranks</a>
+                <a href="#premium" class="nav-link" id="link-premium">Premium Kits</a>
+                <a href="#terms-section" class="nav-link" id="link-terms">Terms</a>
+                <a href="#footer" class="nav-link" id="link-contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart-btn" aria-label="Open Cart">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button class="mobile-toggle" id="menu-toggle-btn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-float">
+                <i class="fa-solid fa-gamepad"></i> Season 2 Live
+            </div>
+            <h1 class="hero-title">Welcome to the <br><span class="gradient-text">Synix Store</span></h1>
+            <p class="hero-subtitle">Equip yourself with elite ranks, enhanced weapons, and legendary premium kits. Dominate the FFA arena and lead the leaderboard today!</p>
+            <div class="hero-actions">
+                <a href="#store" class="btn btn-primary" id="hero-shop-btn">
+                    <i class="fa-solid fa-shopping-bag"></i> Browse Ranks & Maces
+                </a>
+                <a href="#premium" class="btn btn-secondary" id="hero-premium-btn">
+                    <i class="fa-solid fa-gem"></i> Premium Kits Bundle
+                </a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <div class="hero-image-wrapper">
+                <img src="assets/logo.jpg" alt="Synix FFA Season 2 Showcase" class="hero-img animate-pulse-glow">
+                <div class="hero-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Store Section -->
+    <section class="store-section" id="store">
+        <div class="section-header">
+            <span class="section-subtitle">FFA Arsenal & Ranks</span>
+            <h2 class="section-title">Featured Store Items</h2>
+            <div class="title-bar"></div>
+        </div>
+
+        <div class="store-grid">
+            <!-- Dash Mace -->
+            <div class="store-card" id="card-dash-mace">
+                <div class="card-image-wrapper">
+                    <img src="assets/dash_mace.png" alt="Dash Mace Item" class="card-img">
+                    <div class="card-tag tag-hot">HOT</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-item-title">Dash Mace</h3>
+                    <p class="card-item-description">Unleash devastating strikes. Provides an explosive forward dash on click to catch fleeing opponents or escape tight situations.</p>
+                    <div class="card-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">250</span>
+                        </div>
+                        <button class="btn-buy" id="buy-dash-mace" onclick="addToCart('Dash Mace', 250, 'assets/dash_mace.png')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mace 2x -->
+            <div class="store-card" id="card-mace-2x">
+                <div class="card-image-wrapper">
+                    <img src="assets/mace_2x.png" alt="Mace 2x Item" class="card-img">
+                    <div class="card-tag tag-popular">POPULAR</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-item-title">Mace 2x</h3>
+                    <p class="card-item-description">Double the action! Acquire two heavy maces at a discounted bundle price. Perfect for dual-wielding enthusiasts and builders.</p>
+                    <div class="card-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">150</span>
+                        </div>
+                        <button class="btn-buy" id="buy-mace-2x" onclick="addToCart('Mace 2x', 150, 'assets/mace_2x.png')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Synix Rank -->
+            <div class="store-card" id="card-synix-rank">
+                <div class="card-image-wrapper">
+                    <img src="assets/synix_ranks.png" alt="Synix Rank Item" class="card-img">
+                    <div class="card-tag tag-rank">RANK</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-item-title">Synix Rank</h3>
+                    <p class="card-item-description">Unlock the base Synix rank. Comes with exclusive chat prefixes, priority queue access, and daily reward bonus keys.</p>
+                    <div class="card-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">150</span>
+                        </div>
+                        <button class="btn-buy" id="buy-synix-rank" onclick="addToCart('Synix Rank', 150, 'assets/synix_ranks.png')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Synix+ Rank -->
+            <div class="store-card" id="card-synix-plus-rank">
+                <div class="card-image-wrapper">
+                    <img src="assets/synix_ranks.png" alt="Synix+ Rank Item" class="card-img">
+                    <div class="card-tag tag-elite">ELITE</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-item-title">Synix+ Rank</h3>
+                    <p class="card-item-description">The ultimate player experience. Unlocks cosmic chat tags, custom particles, server hosting permissions, and 2x voting power.</p>
+                    <div class="card-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">250</span>
+                        </div>
+                        <button class="btn-buy" id="buy-synix-plus-rank" onclick="addToCart('Synix+ Rank', 250, 'assets/synix_ranks.png')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Kits Section -->
+    <section class="premium-section" id="premium">
+        <div class="section-header">
+            <span class="section-subtitle font-secondary">Unrivaled Power</span>
+            <h2 class="section-title">Premium Custom Kits</h2>
+            <div class="title-bar"></div>
+        </div>
+
+        <div class="premium-grid">
+            <!-- IceLord -->
+            <div class="premium-card card-ice" id="card-icelord">
+                <div class="premium-card-header">
+                    <div class="premium-glow-circle"></div>
+                    <i class="fa-solid fa-snowflake premium-icon"></i>
+                    <div class="premium-badge">PREMIUM</div>
+                </div>
+                <div class="premium-card-body">
+                    <h3 class="premium-title">IceLord Rank</h3>
+                    <p class="premium-desc">Freeze your opponents in place. Applies resistance 2 when held.</p>
+                    <div class="premium-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">500</span>
+                        </div>
+                        <button class="btn-buy-premium" id="buy-icelord" onclick="addToCart('IceLord Rank', 500, 'fa-solid fa-snowflake')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DarkLord -->
+            <div class="premium-card card-dark" id="card-darklord">
+                <div class="premium-card-header">
+                    <div class="premium-glow-circle"></div>
+                    <i class="fa-solid fa-circle-half-stroke premium-icon"></i>
+                    <div class="premium-badge">PREMIUM</div>
+                </div>
+                <div class="premium-card-body">
+                    <h3 class="premium-title">DarkLord Rank</h3>
+                    <p class="premium-desc">Blast your enemies with a 6 heart damaged scream</p>
+                    <div class="premium-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">500</span>
+                        </div>
+                        <button class="btn-buy-premium" id="buy-darklord" onclick="addToCart('DarkLord Rank', 500, 'fa-solid fa-circle-half-stroke')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trickster -->
+            <div class="premium-card card-trickster" id="card-trickster">
+                <div class="premium-card-header">
+                    <div class="premium-glow-circle"></div>
+                    <i class="fa-solid fa-mask premium-icon"></i>
+                    <div class="premium-badge">PREMIUM</div>
+                </div>
+                <div class="premium-card-body">
+                    <h3 class="premium-title">Trickster Rank</h3>
+                    <p class="premium-desc">Disorient your foes. Scramble thier inventory or let them drop thier favored item.</p>
+                    <div class="premium-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">500</span>
+                        </div>
+                        <button class="btn-buy-premium" id="buy-trickster" onclick="addToCart('Trickster Rank', 500, 'fa-solid fa-mask')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reaper -->
+            <div class="premium-card card-reaper" id="card-reaper">
+                <div class="premium-card-header">
+                    <div class="premium-glow-circle"></div>
+                    <i class="fa-solid fa-skull premium-icon"></i>
+                    <div class="premium-badge">PREMIUM</div>
+                </div>
+                <div class="premium-card-body">
+                    <h3 class="premium-title">Reaper Rank</h3>
+                    <p class="premium-desc">You shred armor and grants player immense stregth.</p>
+                    <div class="premium-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">500</span>
+                        </div>
+                        <button class="btn-buy-premium" id="buy-reaper" onclick="addToCart('Reaper Rank', 500, 'fa-solid fa-skull')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gambler -->
+            <div class="premium-card card-gambler" id="card-gambler">
+                <div class="premium-card-header">
+                    <div class="premium-glow-circle"></div>
+                    <i class="fa-solid fa-dice premium-icon"></i>
+                    <div class="premium-badge">PREMIUM</div>
+                </div>
+                <div class="premium-card-body">
+                    <h3 class="premium-title">Gambler Rank</h3>
+                    <p class="premium-desc">Test your luck. Roll the dice on hit to get random combat boosts or inflict chaotic status debuffs or buffs on targets.</p>
+                    <div class="premium-footer">
+                        <div class="price-container">
+                            <span class="price-symbol">₱</span>
+                            <span class="price-value">500</span>
+                        </div>
+                        <button class="btn-buy-premium" id="buy-gambler" onclick="addToCart('Gambler Rank', 500, 'fa-solid fa-dice')">
+                            <i class="fa-solid fa-cart-plus"></i> Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms of Service Section -->
+    <section class="terms-section" id="terms-section">
+        <div class="terms-container">
+            <div class="section-header">
+                <span class="section-subtitle">Important Regulations</span>
+                <h2 class="section-title">Terms & Conditions</h2>
+                <div class="title-bar"></div>
+            </div>
+            <div class="terms-content-box">
+                <p><i class="fa-solid fa-circle-info accent-icon"></i> Please read the following terms and conditions carefully before making any purchases on the Synix FFA Minecraft Store. By purchasing, you acknowledge and agree to all statements listed below.</p>
+                <div class="terms-scroll-pane">
+                    <div class="terms-item">
+                        <h5>1. General Agreement</h5>
+                        <p>All items, ranks, and virtual currency purchased are virtual, in-game goods. They hold no real-world monetary value and cannot be exchanged, sold, or transferred outside the Synix FFA server ecosystem.</p>
+                    </div>
+                    <div class="terms-item">
+                        <h5>2. Refund Policy</h5>
+                        <p>All transactions are strictly final. Once items are processed and assigned to your username, no refunds, chargebacks, or reversals will be accepted under any circumstances. Unauthorized chargebacks will lead to a permanent IP ban across all Synix network platforms.</p>
+                    </div>
+                    <div class="terms-item">
+                        <h5>3. Service Delivery</h5>
+                        <p>Ranks and kits are typically updated within 5 to 30 minutes after GCash/PayMaya transfer confirmation. In rare instances or during maintenance, processing can take up to 24 hours. If your purchase is delayed beyond 24 hours, contact the server staff via Discord.</p>
+                    </div>
+                    <div class="terms-item">
+                        <h5>4. Player Responsibility & Fair Play</h5>
+                        <p>Owning a rank or premium item does not grant immunity from server rules. If you are banned or muted for violating server rules (such as hacking, toxicity, or griefing), your virtual items will be locked without compensation or refund.</p>
+                    </div>
+                    <div class="terms-item">
+                        <h5>5. Server Modifications</h5>
+                        <p>Synix FFA administration reserves the right to modify, nerf, or buff ranks, maces, kits, or server systems to maintain balanced and competitive gameplay. Changes are done with the server's health in mind and do not warrant refunds.</p>
+                    </div>
+                </div>
+                <div class="terms-checkbox-area">
+                    <label class="custom-checkbox" id="terms-accept-label">
+                        <input type="checkbox" id="accept-terms-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label-text">I have read, understood, and agree to the Synix FFA Terms & Conditions.</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Side Cart Drawer / Modal -->
+    <div class="modal-overlay" id="cart-drawer-overlay">
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-shopping-basket"></i> Your Selection</h3>
+                <button class="close-btn" id="close-cart-btn" aria-label="Close Cart">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="cart-content">
+                <div class="cart-empty" id="cart-empty-message">
+                    <i class="fa-solid fa-shopping-bag empty-icon"></i>
+                    <p>Your cart is empty. Select an item or kit to get started!</p>
+                    <a href="#store" class="btn btn-secondary btn-sm" id="cart-go-shop-btn">View Store</a>
+                </div>
+                
+                <div class="cart-items-list" id="cart-items-container">
+                    <!-- Dynamic Cart Items go here -->
+                </div>
+            </div>
+            
+            <div class="cart-footer" id="cart-footer-details">
+                <div class="cart-total-row">
+                    <span>Total Amount:</span>
+                    <span class="total-price" id="cart-total-amount">₱0</span>
+                </div>
+                <div class="cart-notice">
+                    <i class="fa-solid fa-shield-halved"></i> Agreement to Terms of Service is required to check out.
+                </div>
+                <button class="btn btn-primary btn-block" id="checkout-btn">
+                    <i class="fa-solid fa-credit-card"></i> Proceed to Purchase
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Purchase Confirmation / Redirection Modal -->
+    <div class="modal-overlay" id="checkout-modal-overlay">
+        <div class="checkout-modal glass-panel" id="checkout-modal">
+            <button class="close-btn" id="close-checkout-modal" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <i class="fa-solid fa-circle-check success-icon"></i>
+                <h3>Checkout Details</h3>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">Follow the instructions below to complete your payment and receive your items instantly.</p>
+                
+                <!-- Order Summary -->
+                <div class="order-summary-box">
+                    <h4>Order Summary</h4>
+                    <ul class="order-summary-list" id="modal-order-items">
+                        <!-- Dynamic items -->
+                    </ul>
+                    <div class="order-summary-total">
+                        <span>Grand Total:</span>
+                        <strong id="modal-order-total">₱0</strong>
+                    </div>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="payment-instructions">
+                    <h4><i class="fa-solid fa-wallet"></i> Payment Methods</h4>
+                    <div class="payment-methods-grid">
+                        <div class="payment-method-card">
+                            <span class="payment-tag">GCash</span>
+                            <p class="payment-label">Number:</p>
+                            <p class="payment-val font-secondary">0912-345-6789 <button class="copy-btn" onclick="copyText('09123456789')" title="Copy Number"><i class="fa-solid fa-copy"></i></button></p>
+                            <p class="payment-label">Account Name:</p>
+                            <p class="payment-val">S***X F*A</p>
+                        </div>
+                        <div class="payment-method-card">
+                            <span class="payment-tag">Maya</span>
+                            <p class="payment-label">Number:</p>
+                            <p class="payment-val font-secondary">0912-345-6789 <button class="copy-btn" onclick="copyText('09123456789')" title="Copy Number"><i class="fa-solid fa-copy"></i></button></p>
+                            <p class="payment-label">Account Name:</p>
+                            <p class="payment-val">S***X F*A</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact & Claim Instructions -->
+                <div class="discord-contact-box">
+                    <h4><i class="fa-solid fa-paper-plane"></i> How to Claim Your Purchase</h4>
+                    <ol class="steps-list">
+                        <li>Send the exact amount via GCash or Maya.</li>
+                        <li>Take a screenshot of the successful receipt containing the Reference ID.</li>
+                        <li>Click the <strong>Contact via Discord</strong> button below to open our ticket portal.</li>
+                        <li>Submit your Minecraft Username and the receipt screenshot. Ranks/Items are credited instantly upon verification.</li>
+                    </ol>
+
+                    <!-- User Request specific requirement: Expired Discord link fallback note -->
+                    <div class="discord-buttons-group">
+                        <a href="https://discord.gg/tX84c6k6" target="_blank" rel="noopener noreferrer" class="btn btn-discord" id="discord-redirect-link">
+                            <i class="fa-brands fa-discord"></i> Contact via Discord
+                        </a>
+                    </div>
+                    <div class="fallback-note">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span><strong>Note:</strong> If the Discord invite link above is expired, please send a direct message (DM) to <span class="username-highlight">.ramtv</span> or <span class="username-highlight">zennedge</span> on Discord to process your purchase.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="assets/logo.jpg" alt="Synix FFA Logo" class="logo-img">
+                    <span class="logo-text">SYNIX <span class="accent-text">FFA</span></span>
+                </a>
+                <p class="footer-desc">The leading Minecraft Free For All (FFA) experience. Fight, conquer, and upgrade your gear in the most balanced PvP server.</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/tX84c6k6" target="_blank" rel="noopener" class="social-icon" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-group">
+                <div class="footer-links-col">
+                    <h4>Navigation</h4>
+                    <a href="#hero">Home</a>
+                    <a href="#store">Maces & Ranks</a>
+                    <a href="#premium">Premium Kits</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Support & Terms</h4>
+                    <a href="#terms-section">Terms of Service</a>
+                    <a href="#terms-section">Refund Policy</a>
+                    <a href="#footer">Contact Support</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="established-date">Established Date: June 2026</p>
+                <p class="copyright">&copy; 2026 Synix FFA. All rights reserved. Not affiliated with Mojang Studios.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
