@@ -84,7 +84,7 @@
             <!-- Dash Mace -->
             <div class="store-card" id="card-dash-mace">
                 <div class="card-image-wrapper">
-                    <img src="assets/dash_mace.png" alt="Dash Mace Item" class="card-img">
+                    <img src="assets/mace.jpg" alt="Dash Mace Item" class="card-img">
                     <div class="card-tag tag-hot">HOT</div>
                 </div>
                 <div class="card-body">
@@ -126,7 +126,7 @@
             <!-- Synix Rank -->
             <div class="store-card" id="card-synix-rank">
                 <div class="card-image-wrapper">
-                    <img src="assets/synix_ranks.png" alt="Synix Rank Item" class="card-img">
+                    <img src="assets/synix_ranks++.png" alt="Synix Rank Item" class="card-img">
                     <div class="card-tag tag-rank">RANK</div>
                 </div>
                 <div class="card-body">
@@ -161,6 +161,37 @@
                         <button class="btn-buy" id="buy-synix-plus-rank" onclick="addToCart('Synix+ Rank', 250, 'assets/synix_ranks.png')">
                             <i class="fa-solid fa-cart-plus"></i> Select
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crate Keys -->
+            <div class="store-card" id="card-crate-keys">
+                <div class="card-image-wrapper">
+                    <img src="assets/keys.png" alt="Crate Keys Item" class="card-img">
+                    <div class="card-tag tag-hot">KEYS</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-item-title">Crate Keys</h3>
+                    <p class="card-item-description">Unlock mysterious crates filled with powerful rewards, rare items, and exclusive loot to enhance your arsenal.</p>
+                    <div class="card-footer">
+                        <div class="quantity-selector">
+                            <label for="keys-quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn qty-minus" onclick="decreaseQuantity()" aria-label="Decrease quantity">−</button>
+                                <input type="number" id="keys-quantity" min="1" value="1" class="quantity-input" readonly>
+                                <button class="qty-btn qty-plus" onclick="increaseQuantity()" aria-label="Increase quantity">+</button>
+                            </div>
+                        </div>
+                        <div class="price-and-button-row">
+                            <div class="price-container">
+                                <span class="price-symbol">₱</span>
+                                <span class="price-value" id="keys-price">10</span>
+                            </div>
+                            <button class="btn-buy" id="buy-crate-keys" onclick="addCrateKeys()">
+                                <i class="fa-solid fa-cart-plus"></i> Select
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -229,7 +260,7 @@
                 </div>
                 <div class="premium-card-body">
                     <h3 class="premium-title">Trickster Rank</h3>
-                    <p class="premium-desc">Disorient your foes. Scramble thier inventory or let them drop thier favored item.</p>
+                    <p class="premium-desc">Disorient your foes. Scramble thier inventory or disarm thier favored item.</p>
                     <div class="premium-footer">
                         <div class="price-container">
                             <span class="price-symbol">₱</span>
@@ -306,10 +337,11 @@
                     <div class="terms-item">
                         <h5>2. Refund Policy</h5>
                         <p>All transactions are strictly final. Once items are processed and assigned to your username, no refunds, chargebacks, or reversals will be accepted under any circumstances. Unauthorized chargebacks will lead to a permanent IP ban across all Synix network platforms.</p>
+                        <p>If you give away, transfer, or lose any purchased premium kit item, you will forfeit all bought premium items and will not receive a refund. This includes items gifted or traded to other players.</p>
                     </div>
                     <div class="terms-item">
                         <h5>3. Service Delivery</h5>
-                        <p>Ranks and kits are typically updated within 5 to 30 minutes after GCash transfer confirmation. In rare instances or during maintenance, processing can take up to 24 hours. If your purchase is delayed beyond 24 hours, contact the server staff via Discord.</p>
+                        <p>Ranks and kits are typically updated within 5 to 30 minutes after GCash/PayMaya transfer confirmation. In rare instances or during maintenance, processing can take up to 24 hours. If your purchase is delayed beyond 24 hours, contact the server staff via Discord.</p>
                     </div>
                     <div class="terms-item">
                         <h5>4. Player Responsibility & Fair Play</h5>
@@ -318,10 +350,6 @@
                     <div class="terms-item">
                         <h5>5. Server Modifications</h5>
                         <p>Synix FFA administration reserves the right to modify, nerf, or buff ranks, maces, kits, or server systems to maintain balanced and competitive gameplay. Changes are done with the server's health in mind and do not warrant refunds.</p>
-                    </div>
-                    <div class="terms-item">
-                        <h5>6. Premium Kit Transfer Policy</h5>
-                        <p>Players are strictly prohibited from giving away, trading, lending, or otherwise transferring items obtained from purchased premium kits. Violation of this policy will result in the permanent removal of all purchased premium kits, ranks, and related items from the offending account without refund. All purchase payments remain final and non-refundable.</p>
                     </div>
                 </div>
                 <div class="terms-checkbox-area">
@@ -405,6 +433,13 @@
                             <span class="payment-tag">GCash</span>
                             <p class="payment-label">Number:</p>
                             <p class="payment-val font-secondary">0926-088-2889 <button class="copy-btn" onclick="copyText('09123456789')" title="Copy Number"><i class="fa-solid fa-copy"></i></button></p>
+                            <p class="payment-label">Account Name:</p>
+                            <p class="payment-val">AB****M RO******N R.</p>
+                        </div>
+                        <div class="payment-method-card">
+                            <span class="payment-tag">PayMaya</span>
+                            <p class="payment-label">Number:</p>
+                            <p class="payment-val font-secondary">0926-088-2889 <button class="copy-btn" onclick="copyText('0926088289')" title="Copy Number"><i class="fa-solid fa-copy"></i></button></p>
                             <p class="payment-label">Account Name:</p>
                             <p class="payment-val">AB****M RO******N R.</p>
                         </div>

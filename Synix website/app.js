@@ -131,6 +131,62 @@ window.addToCart = function(name, price, img) {
     openCart();
 };
 
+// Add Crate Keys with Quantity
+window.addCrateKeys = function() {
+    const quantityInput = document.getElementById('keys-quantity');
+    const quantity = parseInt(quantityInput.value) || 1;
+    
+    if (quantity < 1) {
+        alert('Please enter a valid quantity');
+        return;
+    }
+    
+    // Add multiple keys to cart
+    for (let i = 0; i < quantity; i++) {
+        cart.push({ name: 'Crate Keys', price: 10, img: 'assets/keys.png' });
+    }
+    
+    // Reset quantity input
+    quantityInput.value = 1;
+    updatePriceDisplay();
+    updateCartUI();
+    openCart();
+};
+
+// Update price display for keys
+function updatePriceDisplay() {
+    const quantityInput = document.getElementById('keys-quantity');
+    const priceDisplay = document.getElementById('keys-price');
+    const quantity = parseInt(quantityInput.value) || 1;
+    priceDisplay.textContent = quantity * 10;
+}
+
+// Increase quantity
+window.increaseQuantity = function() {
+    const quantityInput = document.getElementById('keys-quantity');
+    quantityInput.value = (parseInt(quantityInput.value) || 1) + 1;
+    updatePriceDisplay();
+};
+
+// Decrease quantity
+window.decreaseQuantity = function() {
+    const quantityInput = document.getElementById('keys-quantity');
+    const currentValue = parseInt(quantityInput.value) || 1;
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+        updatePriceDisplay();
+    }
+};
+
+// Add event listener for quantity input changes
+document.addEventListener('DOMContentLoaded', function() {
+    const quantityInput = document.getElementById('keys-quantity');
+    if (quantityInput) {
+        quantityInput.addEventListener('change', updatePriceDisplay);
+        quantityInput.addEventListener('input', updatePriceDisplay);
+    }
+});
+
 // Remove Item from Selection
 window.removeFromCart = function(name) {
     cart = cart.filter(item => item.name !== name);
