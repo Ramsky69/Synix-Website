@@ -178,6 +178,53 @@ window.decreaseQuantity = function() {
     }
 };
 
+// Add Sword Crate Keys with Quantity
+window.addSwordCrateKeys = function() {
+    const quantityInput = document.getElementById('sword-keys-quantity');
+    const quantity = parseInt(quantityInput.value) || 1;
+    
+    if (quantity < 1) {
+        alert('Please enter a valid quantity');
+        return;
+    }
+    
+    // Add multiple sword keys to cart
+    for (let i = 0; i < quantity; i++) {
+        cart.push({ name: 'Sword Crate Keys', price: 15, img: 'assets/Sword.png' });
+    }
+    
+    // Reset quantity input
+    quantityInput.value = 1;
+    updateSwordPriceDisplay();
+    updateCartUI();
+    openCart();
+};
+
+// Update price display for sword keys
+function updateSwordPriceDisplay() {
+    const quantityInput = document.getElementById('sword-keys-quantity');
+    const priceDisplay = document.getElementById('sword-keys-price');
+    const quantity = parseInt(quantityInput.value) || 1;
+    priceDisplay.textContent = quantity * 15;
+}
+
+// Increase sword quantity
+window.increaseSwordQuantity = function() {
+    const quantityInput = document.getElementById('sword-keys-quantity');
+    quantityInput.value = (parseInt(quantityInput.value) || 1) + 1;
+    updateSwordPriceDisplay();
+};
+
+// Decrease sword quantity
+window.decreaseSwordQuantity = function() {
+    const quantityInput = document.getElementById('sword-keys-quantity');
+    const currentValue = parseInt(quantityInput.value) || 1;
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+        updateSwordPriceDisplay();
+    }
+};
+
 // Add event listener for quantity input changes
 document.addEventListener('DOMContentLoaded', function() {
     const quantityInput = document.getElementById('keys-quantity');

@@ -195,6 +195,37 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Sword Crate Keys -->
+            <div class="store-card" id="card-sword-crate-keys">
+                <div class="card-image-wrapper">
+                    <img src="assets/Sword.png" alt="Sword Crate Keys Item" class="card-img">
+                    <div class="card-tag tag-hot">KEYS</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-item-title">Sword Crate Keys</h3>
+                    <p class="card-item-description">Unlock sword-themed crates brimming with legendary blades, enchanted weapons, and warrior artifacts to dominate the arena.</p>
+                    <div class="card-footer">
+                        <div class="quantity-selector">
+                            <label for="sword-keys-quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn qty-minus" onclick="decreaseSwordQuantity()" aria-label="Decrease quantity">−</button>
+                                <input type="number" id="sword-keys-quantity" min="1" value="1" class="quantity-input" readonly>
+                                <button class="qty-btn qty-plus" onclick="increaseSwordQuantity()" aria-label="Increase quantity">+</button>
+                            </div>
+                        </div>
+                        <div class="price-and-button-row">
+                            <div class="price-container">
+                                <span class="price-symbol">₱</span>
+                                <span class="price-value" id="sword-keys-price">15</span>
+                            </div>
+                            <button class="btn-buy" id="buy-sword-crate-keys" onclick="addSwordCrateKeys()">
+                                <i class="fa-solid fa-cart-plus"></i> Select
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
