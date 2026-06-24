@@ -205,7 +205,7 @@ function updateSwordPriceDisplay() {
     const quantityInput = document.getElementById('sword-keys-quantity');
     const priceDisplay = document.getElementById('sword-keys-price');
     const quantity = parseInt(quantityInput.value) || 1;
-    priceDisplay.textContent = quantity * 15;
+    priceDisplay.textContent = quantity * 100;
 }
 
 // Increase sword quantity
