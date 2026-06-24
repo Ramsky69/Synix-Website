@@ -190,7 +190,7 @@ window.addSwordCrateKeys = function() {
     
     // Add multiple sword keys to cart
     for (let i = 0; i < quantity; i++) {
-        cart.push({ name: 'Sword Crate Keys', price: 15, img: 'assets/Sword.png' });
+        cart.push({ name: 'Sword Crate Keys', price: 100, img: 'assets/Sword.png' });
     }
     
     // Reset quantity input
