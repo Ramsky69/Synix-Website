@@ -1,4 +1,4 @@
-// JavaScript Logic for Synix Store Website
+// JavaScript Logic for Kingdom FFA Store Website
 
 // ==========================================================================
 // 1. STATE & DATA INITIALIZATION
